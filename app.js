@@ -18,7 +18,7 @@
     return {
       toko: { namaDariTema: true, nama: NAMA_TEMA, alamat: '', telp: '', footer: 'Terima kasih sudah belanja!', rekening: '' },
       kategori: [], produk: [], transaksi: [],
-      kasir: [{ id: 'k1', nama: 'Aspik', pin: '4321', peran: 'admin' }, { id: 'k2', nama: 'Kembar', pin: '5758', peran: 'kasir' }],
+      kasir: [{ id: 'k1', nama: 'Admin', pin: '1234', peran: 'admin' }],
       nomor: 0
     };
   }
@@ -36,6 +36,7 @@
       ['Pepes Ayam', 'Lauk', 30, [['Standar', 10000]]],
       ['Pepes Tahu Jamur', 'Lauk', 30, [['Standar', 8000]]],
       ['Pepes Ikan Kembung', 'Lauk', 30, [['Standar', 10000]]],
+      ['Pepes Ikan Mujair', 'Lauk', 30, [['Standar', 15000]]],
       ['Nasi Bento', 'Lauk', 20, [['Standar', 15000]]],
       ['Puding Mozaic', 'Camilan', 50, [['Standar', 2500]]],
       ['Brownies', 'Kue', 20, [['Standar', 55000]]]
@@ -672,7 +673,7 @@
     $('#btnEksporProduk').onclick = eksporProdukCSV;
     $('#fileCsv').onchange = function () { bacaFile(this, function (t) { toast(imporProdukCSV(t) + ' produk diimpor'); }); };
     $('#btnContoh').onclick = function () { if (confirm('Ganti data dengan data contoh?')) { D = dataContoh(); simpan(); tampilMasuk(); } };
-    $('#btnReset').onclick = function () { if (confirm('Yakin hapus SEMUA data? Backup dulu ya.')) { D = dataKosong(); simpan(); toast('Data dikosongkan. PIN Aspik: 4321'); tampilMasuk(); } };
+    $('#btnReset').onclick = function () { if (confirm('Yakin hapus SEMUA data? Backup dulu ya.')) { D = dataKosong(); simpan(); toast('Data dikosongkan. PIN admin: 1234'); tampilMasuk(); } };
   }
 
   // ---------- Mulai ----------
